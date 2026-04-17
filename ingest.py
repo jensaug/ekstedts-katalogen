@@ -6,7 +6,10 @@ pdf_path = "data/input/ekstedts-1.pdf"
 try:
     # Attempt to run docling as a command line tool
     result = subprocess.run(
-        ["docling", pdf_path], capture_output=True, text=True, check=True
+        ["docling", pdf_path, "--output", "data/output"],
+        capture_output=True,
+        text=True,
+        check=True,
     )
     print("Docling executed successfully.")
     print("Stdout:", result.stdout)
